@@ -1,11 +1,18 @@
 .contact-component {
     position: relative;
     display: flex;
-    flex-direction: column;    
+    flex-direction: row;    
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: 7vw;
+}
+.contact-text-container {
+    display: flex;
+    flex-direction: column;
     gap: 0.5vw;
     align-items: start;
     justify-content: center;
-    scroll-margin-top: 10vw;
 }
 .contact-component p {
     font: 0.9em 'Roboto', sans-serif;

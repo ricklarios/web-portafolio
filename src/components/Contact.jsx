@@ -11,22 +11,24 @@ const Contact = forwardRef((props, ref) => {
         src={avatar}
         alt="Avatar"
         className="contact-avatar"
-        style={{ width: "100px" }}
+        style={{ width: "120px" }}
       />
-      <h1 className="contact-title">&lt;Contact/&gt;</h1>
-      <p>Name: {texts.contacto.name}</p>
-      <p>email: {texts.contacto.email}</p>
-      <a
-        href="https://www.linkedin.com/in/ricklarios/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src={linkedinLogo}
-          alt="LinkedIn"
-          className="contact-linkedin-logo"
-        />
-      </a>
+      <div className="contact-text-container">
+        <h1 className="contact-title">&lt;Contact/&gt;</h1>
+        <p>Name: {texts.contacto.name}</p>
+        <p>email: {texts.contacto.email}</p>
+        <a
+          href="https://www.linkedin.com/in/ricklarios/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={linkedinLogo}
+            alt="LinkedIn"
+            className="contact-linkedin-logo"
+          />
+        </a>
+      </div>
     </div>
   );
 });

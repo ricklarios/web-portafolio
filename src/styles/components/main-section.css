@@ -28,3 +28,12 @@
     opacity: 0;                  /* Termina completamente invisible */
     transition: opacity 0.5s ease;
 }
+.out-of-view .contact-component {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5vh;
+}
+.out-of-view .contact-component h1 {
+    font-size: 1.5rem;
+}

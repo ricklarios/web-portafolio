@@ -14,7 +14,7 @@ const MainSection = ({ refs }) => {
         // Actualiza el estado cuando el div sale o entra en la vista
         setIsOutOfView(!entry.isIntersecting);
       },
-      { threshold: 1.0 }
+      { threshold: 0 }
     );
 
     const currentDiv = divRef.current;
@@ -37,7 +37,7 @@ const MainSection = ({ refs }) => {
       <About ref={refs.aboutRef} />
       <Education ref={refs.educationRef} />
 
-      <div className={`out-of-view + ${isOutOfView ? "" : "hidden"} `}>
+      <div className={`out-of-view ${isOutOfView ? "" : "hidden"} `}>
         <Contact />
       </div>
     </main>
