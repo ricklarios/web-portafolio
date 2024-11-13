@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/components/contact.css"; // Assuming you will add some styles
 import avatar from "../assets/images/Profile new.png";
 import linkedinLogo from "../assets/images/linkedin.jpg";
+import texts from "../utils/data";
 
 const Contact = () => {
   return (
@@ -13,10 +14,10 @@ const Contact = () => {
         style={{ width: "100px" }}
       />
       <h2 className="contact-title">&lt;Contact/&gt;</h2>
-      <p>Name: Ricardo Larios</p>
-      <p>email: ricklarios@gmail.com</p>
+      <p>Name: {texts.contacto.name}</p>
+      <p>email: {texts.contacto.email}</p>
       <a
-        href="https://www.linkedin.com/in/ricardo-larios"
+        href="https://www.linkedin.com/in/ricklarios/"
         target="_blank"
         rel="noopener noreferrer"
       >

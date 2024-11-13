@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/components/footer.css"; // Make sure to create a corresponding CSS file for styling
-
+import texts from "../utils/data";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -16,7 +16,7 @@ const Footer = () => {
             <a href="/privacy">Privacy Policy</a>
           </li>
         </ul>
-        <p>&copy; 2024 Ricardo Larios. All rights reserved.</p>
+        <p>&copy; {texts.footer.copyrigth}</p>
       </div>
     </footer>
   );
