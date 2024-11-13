@@ -4,7 +4,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Education from "./Education";
 
-const MainSection = () => {
+const MainSection = ({ refs }) => {
   const divRef = useRef(null);
   const [isOutOfView, setIsOutOfView] = useState(false);
 
@@ -32,10 +32,10 @@ const MainSection = () => {
   return (
     <main className="main-section">
       <div ref={divRef}>
-        <Contact />
+        <Contact ref={refs.contactRef} />
       </div>
-      <About />
-      <Education />
+      <About ref={refs.aboutRef} />
+      <Education ref={refs.educationRef} />
 
       <div className={`out-of-view + ${isOutOfView ? "" : "hidden"} `}>
         <Contact />

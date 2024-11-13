@@ -1,20 +1,55 @@
-import React from 'react';
-import '../styles/components/header.css';
+import React from "react";
+import "../styles/components/header.css";
 
-const Header = () => {
-    return (
-        <header className="header">
-            <nav>
-                <ul className='nav-list'>
-                    <li><a href="#about-me">ABOUT ME</a></li>
-                    <li><a href="#proyectos">PROYECTOS</a></li>
-                    <li><a href="#experiencia">EXPERIENCIA</a></li>
-                    <li><a href="#formacion">FORMACIÓN</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
-                </ul>
-            </nav>
-        </header>
-    );
+const Header = ({ scrollToSection, refs }) => {
+  return (
+    <header className="header">
+      <nav>
+        <ul className="nav-list">
+          <li>
+            <button
+              className="link-button"
+              onClick={() => scrollToSection(refs.aboutRef)}
+            >
+              ABOUT ME
+            </button>
+          </li>
+          <li>
+            <button
+              className="link-button"
+              onClick={() => scrollToSection(refs.projectsRef)}
+            >
+              PROYECTOS
+            </button>
+          </li>
+          <li>
+            <button
+              className="link-button"
+              onClick={() => scrollToSection(refs.experienceRef)}
+            >
+              EXPERIENCIA
+            </button>
+          </li>
+          <li>
+            <button
+              className="link-button"
+              onClick={() => scrollToSection(refs.educationRef)}
+            >
+              FORMACIÓN
+            </button>
+          </li>
+          <li>
+            <button
+              className="link-button"
+              onClick={() => scrollToSection(refs.contactRef)}
+            >
+              CONTACTO
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
 export default Header;

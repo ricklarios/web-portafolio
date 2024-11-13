@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../styles/components/contact.css"; // Assuming you will add some styles
 import avatar from "../assets/images/Profile new.png";
 import linkedinLogo from "../assets/images/linkedin.jpg";
 import texts from "../utils/data";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   return (
-    <div className="contact-component">
+    <div ref={ref} id="contact" className="contact-component">
       <img
         src={avatar}
         alt="Avatar"
@@ -29,6 +29,6 @@ const Contact = () => {
       </a>
     </div>
   );
-};
+});
 
 export default Contact;

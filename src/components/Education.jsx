@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import texts from "../utils/data";
 import "../styles/components/education.css";
 
@@ -13,9 +13,9 @@ const EducationItem = ({ title, institution, year, description }) => (
   </div>
 );
 
-const Education = () => {
+const Education = forwardRef((props, ref) => {
   return (
-    <div className="education">
+    <div ref={ref} className="education">
       <h1 className="title">{texts.education.title}</h1>
       {texts.education.list.map((edu, index) => (
         <EducationItem
@@ -28,6 +28,6 @@ const Education = () => {
       ))}
     </div>
   );
-};
+});
 
 export default Education;

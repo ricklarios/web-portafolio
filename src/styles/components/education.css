@@ -16,3 +16,6 @@
 .education .title {
     margin-bottom: 25px;
 }
+.education {    
+    scroll-margin-top: 10vw;
+}
