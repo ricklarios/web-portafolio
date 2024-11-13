@@ -19,7 +19,7 @@ const Header = ({ scrollToSection, refs }) => {
               className="link-button"
               onClick={() => scrollToSection(refs.projectsRef)}
             >
-              PROYECTOS
+              PROJECTS
             </button>
           </li>
           <li>
@@ -27,7 +27,7 @@ const Header = ({ scrollToSection, refs }) => {
               className="link-button"
               onClick={() => scrollToSection(refs.experienceRef)}
             >
-              EXPERIENCIA
+              EXPERIENCE
             </button>
           </li>
           <li>
@@ -35,7 +35,7 @@ const Header = ({ scrollToSection, refs }) => {
               className="link-button"
               onClick={() => scrollToSection(refs.educationRef)}
             >
-              FORMACIÓN
+              EDUCATION
             </button>
           </li>
           <li>
@@ -43,7 +43,7 @@ const Header = ({ scrollToSection, refs }) => {
               className="link-button"
               onClick={() => scrollToSection(refs.contactRef)}
             >
-              CONTACTO
+              CONTACT
             </button>
           </li>
         </ul>

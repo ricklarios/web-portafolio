@@ -3,6 +3,7 @@ import "../styles/components/main-section.css"; // Assuming you will add some st
 import About from "./About";
 import Contact from "./Contact";
 import Education from "./Education";
+import Projects from "./Projects";
 
 const MainSection = ({ refs }) => {
   const divRef = useRef(null);
@@ -35,6 +36,7 @@ const MainSection = ({ refs }) => {
         <Contact ref={refs.contactRef} />
       </div>
       <About ref={refs.aboutRef} />
+      <Projects ref={refs.projectsRef} />
       <Education ref={refs.educationRef} />
 
       <div className={`out-of-view ${isOutOfView ? "" : "hidden"} `}>
