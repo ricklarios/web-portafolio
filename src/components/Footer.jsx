@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; 2024 Ricardo Larios. All rights reserved.</p>
         <ul className="footer-links">
           <li>
             <a href="/about">About</a>
@@ -17,6 +16,7 @@ const Footer = () => {
             <a href="/privacy">Privacy Policy</a>
           </li>
         </ul>
+        <p>&copy; 2024 Ricardo Larios. All rights reserved.</p>
       </div>
     </footer>
   );
