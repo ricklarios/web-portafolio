@@ -27,20 +27,6 @@ const Contact = () => {
           className="contact-linkedin-logo"
         />
       </a>
-      {/* <div className="contact-email-container">
-        <input
-          type="text"
-          value="ricklarios@gmail.com"
-          readOnly
-          className="contact-email"
-        />
-        <button onClick={() => alert("Email sent!")}>Send</button>
-        <button
-          onClick={() => navigator.clipboard.writeText("ricklarios@gmail.com")}
-        >
-          Copy
-        </button>
-      </div> */}
     </div>
   );
 };

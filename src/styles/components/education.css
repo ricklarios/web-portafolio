@@ -1,0 +1,18 @@
+.education-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-bottom: 20px;  
+    border-bottom: 1px solid #e0e0e094;  
+}
+.institution-year {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;  
+    font-size: 0.8rem;  
+}
+
+.education .title {
+    margin-bottom: 20px;
+}
