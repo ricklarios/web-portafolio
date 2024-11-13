@@ -14,3 +14,16 @@
 .main-section h1 {
     text-shadow: 0px 0px 10px #000000;
 }
+.out-of-view {
+    position: fixed;
+    margin: 20px 10px;
+    padding: 0;
+    scale: 0.8;
+    opacity: 1;                  /* Comienza completamente visible */
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.out-of-view.hidden {
+    opacity: 0;                  /* Termina completamente invisible */
+    transition: opacity 0.5s ease;
+}
