@@ -1,0 +1,38 @@
+.header {
+    margin: 0;
+    padding: 5px 5px 0px 5px;
+    border: 0;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #a7a7a785;
+    background-image: radial-gradient(circle at 120.71% 50%, #6c3f60 0, #61355d 16.67%, #542a5b 33.33%, #441f59 50%, #301657 66.67%, #121056 83.33%, #02315E 100%);
+}
+.header nav {
+    height: 100%;
+}
+
+.nav-list {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-list a {
+    padding: 12px;
+    border-radius: 5px 5px 0 0;
+    text-decoration: none;
+    color: inherit;
+    font: 0.9em 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.nav-list a:hover {
+    background-color: #1b2f3fe2;
+    color: #d0c3d7;
+}
+

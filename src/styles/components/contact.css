@@ -1,0 +1,59 @@
+.contact-component {
+    position: relative;
+    display: flex;
+    flex-direction: column;    
+    gap: 0.5vw;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 5vw;
+}
+.contact-component p {
+    font: 0.9em 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #a7a7a7;
+}
+.contact-avatar {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.contact-title {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+.contact-email-container {
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+.contact-email-container * {
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #a7a7a785;
+    color: black;
+    padding: 7px;
+}
+
+.contact-email-container input {
+    width: 100%;
+    font: 0.9em 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #a7a7a785;
+    color: white;
+}
+
+.contact-email-container button {
+    background-color: #1b2f3fe2;
+    color: white;
+    font: 0.9em 'Roboto', sans-serif;
+    font-weight: 600;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+.contact-email-container button:hover {
+    background-color: #2e4e69;
+}

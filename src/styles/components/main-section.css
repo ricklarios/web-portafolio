@@ -1,0 +1,10 @@
+.main-section {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.main-section > * {
+    padding-inline: 20vw;
+}
