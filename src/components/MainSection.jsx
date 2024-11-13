@@ -14,7 +14,7 @@ const MainSection = ({ refs }) => {
         // Actualiza el estado cuando el div sale o entra en la vista
         setIsOutOfView(!entry.isIntersecting);
       },
-      { threshold: 0 }
+      { threshold: 1.0 }
     );
 
     const currentDiv = divRef.current;
