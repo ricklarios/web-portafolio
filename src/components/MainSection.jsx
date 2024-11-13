@@ -8,8 +8,8 @@ const MainSection = () => {
   return (
     <main className="main-section">
       <Contact />
-      <Education />
       <About />
+      <Education />
     </main>
   );
 };

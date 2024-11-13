@@ -13,7 +13,7 @@ const Contact = () => {
         className="contact-avatar"
         style={{ width: "100px" }}
       />
-      <h2 className="contact-title">&lt;Contact/&gt;</h2>
+      <h1 className="contact-title">&lt;Contact/&gt;</h1>
       <p>Name: {texts.contacto.name}</p>
       <p>email: {texts.contacto.email}</p>
       <a
