@@ -4,12 +4,20 @@ import About from "./About";
 import Contact from "./Contact";
 import Education from "./Education";
 import Projects from "./Projects";
+import createPlaylist from "../utils/spotifyService";
 
 const MainSection = ({ refs }) => {
   const divRef = useRef(null);
   const [isOutOfView, setIsOutOfView] = useState(false);
+  const [playlist, setPlaylist] = useState(null);
 
   useEffect(() => {
+    console.log(playlist);
+  }, [playlist]);
+
+  useEffect(() => {
+    const newPlaylist = createPlaylist("happy", "running", 10);
+    setPlaylist(newPlaylist);
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Actualiza el estado cuando el div sale o entra en la vista
