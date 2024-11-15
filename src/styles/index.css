@@ -20,3 +20,6 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+body.modal-open {
+  padding-right: 0px !important;
+}

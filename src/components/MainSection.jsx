@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import Education from "./Education";
 import Projects from "./Projects";
 import createPlaylist from "../utils/spotifyService";
+import OffcanvasComponent from "./Offcanvas";
 
 const MainSection = ({ refs }) => {
   const divRef = useRef(null);
@@ -16,8 +17,8 @@ const MainSection = ({ refs }) => {
   }, [playlist]);
 
   useEffect(() => {
-    const newPlaylist = createPlaylist("happy", "running", 10);
-    setPlaylist(newPlaylist);
+    /* const newPlaylist = createPlaylist("happy", "running", 10);
+    setPlaylist(newPlaylist); */
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Actualiza el estado cuando el div sale o entra en la vista
@@ -42,6 +43,7 @@ const MainSection = ({ refs }) => {
     <main className="main-section">
       <div ref={divRef}>
         <Contact ref={refs.contactRef} />
+        <OffcanvasComponent />
       </div>
       <About ref={refs.aboutRef} />
       <Projects ref={refs.projectsRef} />

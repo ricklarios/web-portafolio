@@ -11,7 +11,7 @@ const Contact = forwardRef((props, ref) => {
         src={avatar}
         alt="Avatar"
         className="contact-avatar"
-        style={{ width: "120px" }}
+        style={{ width: "150px" }}
       />
       <div className="contact-text-container">
         <h1 className="contact-title">&lt;Contact/&gt;</h1>
