@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    height: 5vw;
+    height: 65px;
     width: 100%;
     border-bottom: 1px solid #a7a7a785;
     background-image: radial-gradient(circle at 120.71% 50%, #6c3f60 0, #61355d 16.67%, #542a5b 33.33%, #441f59 50%, #301657 66.67%, #121056 83.33%, #02315E 100%);
@@ -20,7 +20,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: end;
-    gap: 10px;
+    gap: 5vw;
     list-style: none;
     padding: 0;
     margin: 0;
