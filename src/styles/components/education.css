@@ -19,3 +19,16 @@
 .education {    
     scroll-margin-top: 10vw;
 }
+
+@media (max-width: 1024px) {
+    .education {
+        width: 100%;
+        font-size: 2vw;
+    }
+    .education .title {
+        font-size: 4vw;
+    }
+    .education h3 {
+        font-size: 3vw;
+    }
+}

@@ -1,10 +1,11 @@
 .main-section {
     position: relative;
+    margin: auto;
     margin-top: 65px;
     display: flex;
     flex-direction: column;
     gap: 15vh;
-    max-width: 1400px;
+    max-width: 1000px;
 }
 .main-section > * {
     padding-inline: 20vh;
