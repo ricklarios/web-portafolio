@@ -1,14 +1,12 @@
 import React from "react";
-import Mediaset from "./Projects/Mediaset";
 import "../styles/components/projects.css";
+import Mediaset from "./Projects/Mediaset";
 
 const Projects = () => {
   return (
     <div className="projects">
       <h1>My Projects</h1>
-      <div className="projects-container">
-        <Mediaset />
-      </div>
+      <Mediaset />
     </div>
   );
 };
