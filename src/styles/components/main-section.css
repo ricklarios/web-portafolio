@@ -1,15 +1,19 @@
 .main-section {
     position: relative;
-    top: 5vw;
-    padding-top: 5vh;
+    margin-top: 65px;
     display: flex;
     flex-direction: column;
     gap: 1vh;
     max-width: 1920px;
 }
+@media (max-width: 1024px) {
+    .main-section .contact-component{
+        margin-top: 0;
+    }
+}
 
 .main-section > * {
-    padding-inline: 20vw;
+    padding-inline: 25vw;
     margin-bottom: 5vw;
 }
 .main-section h1 {

@@ -17,12 +17,12 @@ function OffcanvasComponent() {
       <div className="btn btn-primary w-75" onClick={handleShow}>
         Create Playlist
       </div>
-      <div>
+      <div className="description">
         <p className="text-sm-center lh-sm w-100">
           Let me inspire you with a playlist specially designed for you, using
           my favorite artists and the mood you choose.
         </p>
-        <h2>Based on:</h2>
+        <h2>Based on APIs:</h2>
         <div className="description-logos">
           <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo" />
           <img src={openAiLogo} alt="OpenAI Logo" className="openai-logo" />

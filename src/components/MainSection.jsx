@@ -41,9 +41,9 @@ const MainSection = ({ refs }) => {
 
   return (
     <main className="main-section">
+      <OffcanvasComponent />
       <div ref={divRef}>
         <Contact ref={refs.contactRef} />
-        <OffcanvasComponent />
       </div>
       <About ref={refs.aboutRef} />
       <Projects ref={refs.projectsRef} />
