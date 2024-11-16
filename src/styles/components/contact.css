@@ -1,6 +1,6 @@
 .contact-component {
     position: relative;
-    padding-top: 8vh;
+    padding-top: 10vh;
     display: flex;
     flex-direction: row;    
     gap: 5vw;
@@ -14,6 +14,7 @@
     gap: 0.1rem;
     align-items: start;
     justify-content: center;
+    padding: 5px;
 }
 .contact-component p {
     font: 1rem 'Roboto', sans-serif;
@@ -23,7 +24,7 @@
 }
 .contact-avatar {
     border-radius: 8px;
-    width: 100%;
+    width: 150px;
     margin-bottom: 10px;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
@@ -58,4 +59,45 @@
     border: 1px solid #a7a7a785;
     color: black;
     padding: 7px;
+}
+@media (max-width: 1024px) {
+    .contact-component {
+        padding-top: 0;
+    }
+    
+    .contact-component p {
+        font-size: 0.9rem;
+    }
+    .contact-avatar {
+        width: 120px;
+    }
+}
+@media (max-width: 768px) {
+    .contact-component {
+        flex-direction: row;
+        padding-top: 4vh;
+        gap: 3vh;
+    }
+    .contact-text-container {
+        gap: 0.5rem;
+    }
+    .contact-component p {
+        font-size: 0.9rem;
+    }
+    .contact-avatar {
+        width: 100px;
+    }
+    .contact-linkedin-logo {
+        width: 80px;
+    }
+    .contact-title {
+        font-size: large;
+    }
+    .contact-email-container {
+        width: 180px;
+        gap: 2vw;
+    }
+    .contact-email-container * {
+        padding: 5px;
+    }
 }
