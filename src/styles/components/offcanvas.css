@@ -3,7 +3,7 @@
 .offcanvas-component {
     position: absolute;
     top: 60px;
-    right: 30px;
+    right: 5vw;
     max-width: 220px;
     background-color: rgba(0, 0, 0, 0.174);
     border-radius: 10px;    

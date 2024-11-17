@@ -1,12 +1,13 @@
 .contact-component {
     position: relative;
-    padding-top: 10vh;
+    padding-top: 5vh;
     display: flex;
     flex-direction: row;    
     gap: 5vw;
     align-items: center;
     justify-content: left;
     scroll-margin-top: 15vw;
+    
 }
 .contact-text-container {
     display: flex;
