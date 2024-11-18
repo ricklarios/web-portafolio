@@ -1,0 +1,19 @@
+.playlist, h2{
+font-size: 0.8vw;
+font-family: "Permanent Marker", cursive;
+font-weight: 300;
+background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: none; 
+}
+.playlist p {
+margin: 0;
+}
+.playlist-container {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    scale: 0.9;    
+}

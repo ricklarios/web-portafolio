@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Offcanvas, Form, Button } from "react-bootstrap";
+import { Offcanvas, Form, Button, Spinner } from "react-bootstrap";
+import Playlist from "./Playlist"; // Import the Playlist component
 import React, { useState } from "react";
 import "../styles/components/offcanvas.css";
 import spotifyLogo from "../assets/images/spotify.png";
@@ -11,12 +12,17 @@ function OffcanvasComponent() {
   const [show, setShow] = useState(false);
   const [mood, setMood] = useState("");
   const [activity, setActivity] = useState("");
+  const [showSpinner, setShowSpinner] = useState(false);
+  const [showPlaylist, setShowPlaylist] = useState(false);
+  const [playlist, setPlaylist] = useState(null);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleSubmit = async (e) => {
+  const handleSubmitCreatePlaylist = async (e) => {
     e.preventDefault();
+    setShowSpinner(true);
+    setShowPlaylist(false);
     console.log(mood, activity);
     const serverUrl = process.env.REACT_APP_SERVER_URL;
     const options = {
@@ -37,10 +43,13 @@ function OffcanvasComponent() {
         body,
         options
       );
-
-      console.log("Playlist generated:", response);
+      setPlaylist(response.data);
+      setShowPlaylist(true);
+      console.log("Playlist generated:", response.data);
     } catch (error) {
       console.log("Error generating playlist:", error);
+    } finally {
+      setShowSpinner(false);
     }
     /* axios
       .get(`${serverUrl}/api/playlist/create`, body, options)
@@ -75,7 +84,7 @@ function OffcanvasComponent() {
         </div>
       </div>
       <Offcanvas
-        className="offcanvas-expand"
+        className="offcanvas-expand overflow-auto"
         show={show}
         onHide={handleClose}
         placement={"end"}
@@ -107,34 +116,51 @@ function OffcanvasComponent() {
             </p>
             <Form
               className="d-flex flex-column gap-3 w-100"
-              onSubmit={handleSubmit}
+              onSubmit={handleSubmitCreatePlaylist}
             >
-              <Form.Group>
-                <Form.Label>Mood</Form.Label>
+              <Form.Group className="d-flex flex-row align-items-center gap-4 justify-content-between w-100">
+                <Form.Label className="fs-6 m-0">Mood</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="How you feel today?"
                   required
+                  size="sm"
                   value={mood}
                   onChange={handleMoodChange}
+                  className="w-50"
                 />
                 {/* <Form.Text>
                   Describe in your own words how you feel today
                 </Form.Text> */}
               </Form.Group>
-              <Form.Group>
+              <Form.Group className="d-flex flex-row align-items-center gap-4 justify-content-between w-100">
                 <Form.Label>Activity</Form.Label>
                 <Form.Control
                   type="text"
                   required
+                  size="sm"
                   placeholder="What you are doing right now?"
                   value={activity}
                   onChange={handleActivityChange}
+                  className="w-50"
                 />
                 {/* <Form.Text>Tell me what you are doing right now</Form.Text> */}
               </Form.Group>
-              <Button type="submit">Create playlist</Button>
+              <Button type="submit" className="btn w-50 align-self-center mt-3">
+                {showSpinner && (
+                  <Spinner
+                    animation="grow"
+                    size="sm"
+                    role="status"
+                    className="me-2"
+                  >
+                    <span className="visually-hidden">Loading...</span>
+                  </Spinner>
+                )}
+                {showSpinner ? "Processing..." : "Create playlist"}
+              </Button>
             </Form>
+            {showPlaylist && <Playlist songs={playlist}></Playlist>}
           </Offcanvas.Body>
         </div>
       </Offcanvas>
