@@ -9,6 +9,14 @@ const Header = ({ scrollToSection, refs }) => {
           <li>
             <button
               className="link-button"
+              onClick={() => scrollToSection(refs.contactRef)}
+            >
+              CONTACT
+            </button>
+          </li>
+          <li>
+            <button
+              className="link-button"
               onClick={() => scrollToSection(refs.aboutRef)}
             >
               ABOUT ME
@@ -25,14 +33,6 @@ const Header = ({ scrollToSection, refs }) => {
           <li>
             <button
               className="link-button"
-              onClick={() => scrollToSection(refs.experienceRef)}
-            >
-              EXPERIENCE
-            </button>
-          </li>
-          <li>
-            <button
-              className="link-button"
               onClick={() => scrollToSection(refs.educationRef)}
             >
               EDUCATION
@@ -41,9 +41,9 @@ const Header = ({ scrollToSection, refs }) => {
           <li>
             <button
               className="link-button"
-              onClick={() => scrollToSection(refs.contactRef)}
+              onClick={() => scrollToSection(refs.experienceRef)}
             >
-              CONTACT
+              EXPERIENCE
             </button>
           </li>
         </ul>
