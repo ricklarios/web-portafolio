@@ -22,25 +22,31 @@
     flex-direction: row;
     justify-content: center;
     align-items: end;
-    gap: 5vw;
+    gap: 2vw;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 .nav-list button {
     padding: 12px 15px 15px 15px;
-    border: none;
     border-radius: 5px 5px 0 0;
     text-decoration: none;
     color: inherit;
     font: 0.9em 'Roboto', sans-serif;
     font-weight: 400;
     background-color: transparent;
+    z-index: 1000;
+    position: relative;
+    top: 1px;
+    border: 1px solid #a7a7a700;
 }
 
 .nav-list button:hover {
-    background-color: #6B99C3;
-    color: #16354D;
-     font-weight: 400;
+    background-color: #0C151C;
+    border: 1px solid #a7a7a785;
+    border-bottom: 1px solid #16354D;
+    box-shadow: 0px -2px 20px -3px #00000075;
+   transition: all 0.3s ease;
+   color: #D2D2D4;
 }
 
