@@ -1,20 +1,41 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Offcanvas, Form, Button, Spinner } from "react-bootstrap";
 import Playlist from "./Playlist"; // Import the Playlist component
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/components/offcanvas.css";
 import spotifyLogo from "../assets/images/spotify.png";
 import openAiLogo from "../assets/images/openia-crop.png";
 import offcanvasBg from "../assets/images/man-4807395_1920.jpg";
 import axios from "axios";
+import { TrackUrisContext } from "../App";
 
 function OffcanvasComponent() {
   const [show, setShow] = useState(false);
-  const [mood, setMood] = useState("");
-  const [activity, setActivity] = useState("");
+  const [mood, setMood] = useState(() => localStorage.getItem("mood") || "");
+  const [activity, setActivity] = useState(
+    () => localStorage.getItem("activity") || ""
+  );
   const [showSpinner, setShowSpinner] = useState(false);
   const [showPlaylist, setShowPlaylist] = useState(false);
   const [playlist, setPlaylist] = useState(null);
+  const [showError, setShowError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const { setTrackUris } = React.useContext(TrackUrisContext);
+
+  useEffect(() => {
+    localStorage.setItem("mood", mood);
+  }, [mood]);
+
+  useEffect(() => {
+    localStorage.setItem("activity", activity);
+  }, [activity]);
+  useEffect(() => {
+    // Obtener las URIs de las canciones de la playlist
+    if (playlist) {
+      const trackUris = playlist.map((track) => track.uri);
+      setTrackUris(trackUris);
+    }
+  }, [playlist]);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -23,6 +44,7 @@ function OffcanvasComponent() {
     e.preventDefault();
     setShowSpinner(true);
     setShowPlaylist(false);
+    setShowError(false);
     console.log(mood, activity);
     const serverUrl = process.env.REACT_APP_SERVER_URL;
     const options = {
@@ -47,20 +69,32 @@ function OffcanvasComponent() {
       setShowPlaylist(true);
       console.log("Playlist generated:", response.data);
     } catch (error) {
+      setShowPlaylist(false);
+      setShowError(true);
       console.log("Error generating playlist:", error);
     } finally {
       setShowSpinner(false);
     }
-    /* axios
-      .get(`${serverUrl}/api/playlist/create`, body, options)
-      .then((response) => {
-        console.log("Playlist generated:", response.data);
-        // Handle the response data as needed
-      })
-      .catch((error) => {
-        console.error("Error generating playlist:", error);
-        // Handle the error as needed
-      }); */
+  };
+  const handleLogin = () => {
+    const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+    const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URL; // Cambia esto a tu URL
+    const SCOPES = [
+      "playlist-modify-private",
+      "playlist-modify-public",
+      "user-follow-read",
+      "user-read-private",
+    ].join(" ");
+
+    const AUTH_URL = `https://accounts.spotify.com/authorize?response_type=code&client_id=${CLIENT_ID}&scope=${encodeURIComponent(
+      SCOPES
+    )}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
+
+    window.location.href = AUTH_URL; // Redirige al usuario a Spotify
+  };
+  const handlePlayOnSpotify = async () => {
+    setLoading(true);
+    handleLogin();
   };
 
   const handleMoodChange = (e) => setMood(e.target.value);
@@ -160,7 +194,19 @@ function OffcanvasComponent() {
                 {showSpinner ? "Processing..." : "Create playlist"}
               </Button>
             </Form>
-            {showPlaylist && <Playlist songs={playlist}></Playlist>}
+            {showPlaylist && (
+              <div>
+                <Playlist songs={playlist}></Playlist>
+                <button onClick={handlePlayOnSpotify} disabled={loading}>
+                  {loading ? "Generating..." : "Listen on Spotify"}
+                </button>
+              </div>
+            )}
+            {showError && (
+              <p className="text-danger text-center">
+                There was an error creating the playlist. Please try again.
+              </p>
+            )}
           </Offcanvas.Body>
         </div>
       </Offcanvas>

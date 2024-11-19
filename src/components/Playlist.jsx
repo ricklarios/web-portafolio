@@ -3,10 +3,7 @@ import "../styles/components/playlist.css";
 
 const Playlist = ({ songs }) => {
   return (
-    <div
-      className="playlist-container"
-      /* style={{ backgroundImage: `url(${notebook})` }} */
-    >
+    <div className="playlist-container">
       <h2 className="fs-4 text-center">Your custom playlist:</h2>
       <div className="playlist">
         {songs.map((song, index) => (
