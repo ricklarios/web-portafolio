@@ -103,7 +103,7 @@ function OffcanvasComponent() {
 
   return (
     <div className="offcanvas-component">
-      <h1 className="offcanvas-title text-center">Your Mood, My Playlist !!</h1>
+      <h1 className="offcanvas-title text-center">Your Mood, My Playlist</h1>
       <div className="btn btn-primary w-75" onClick={handleShow}>
         Create Playlist
       </div>
@@ -131,7 +131,7 @@ function OffcanvasComponent() {
           <Offcanvas.Header>
             <Offcanvas.Title>
               <h1 className="offcanvas-title text-center">
-                Your Mood, My Playlist !!
+                Your Mood, My Playlist
               </h1>
             </Offcanvas.Title>
             <button
