@@ -200,13 +200,13 @@ function OffcanvasComponent() {
             </Form>
             {showPlaylist && (
               <div className="d-flex flex-column align-items-center">
-                <Playlist songs={playlist}></Playlist>
                 <img
                   onClick={handlePlayOnSpotify}
                   alt=""
-                  className="spotify-btn"
+                  className="spotify-btn m-3"
                   src={listenOnSpotify}
                 ></img>
+                <Playlist songs={playlist}></Playlist>
               </div>
             )}
             {showError && (

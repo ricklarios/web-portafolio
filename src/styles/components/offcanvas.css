@@ -16,14 +16,14 @@
     z-index: 100;
 }
 .offcanvas-component .offcanvas-title {
-    font-family: "Permanent Marker", cursive;
-    font-size: 1.5rem;
+    font-family: "Oswald", cursive;
+    font-size: 1.4rem;
     font-weight: 300;
     font-style: normal;
-    background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
+    /* background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     text-shadow: none;
     margin: 0;
 }
@@ -47,7 +47,7 @@
 }
 
 .offcanvas-component h2 {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Oswald", cursive;
     font-size: 1rem;
     font-weight: 300;
     font-style: normal;
@@ -76,14 +76,14 @@
     color: #e6e7eb;
 }
 .offcanvas-expand .offcanvas-title{
-    font-family: "Permanent Marker", cursive;
+    font-family: "Oswald", cursive;
     font-size: 2rem;
     font-weight: 300;
     font-style: normal;
-    background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
+    /* background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     text-shadow: none;
     margin: 0;
 }
@@ -105,11 +105,11 @@
 }
 .offcanvas-expand .create-btn {
     border: 1px solid #a7a7a7;
-    background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
+    /* background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%); */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
 }
 .offcanvas-expand .create-btn:hover {
-    background-image: linear-gradient(to bottom, #ffab23 0%, #ff991d 10%, #ff7a15 100%);
+    /* background-image: linear-gradient(to bottom, #ffab23 0%, #ff991d 10%, #ff7a15 100%); */
     border: 1px solid #e6e7eb;
 }
 .offcanvas-expand .spotify-btn  {
