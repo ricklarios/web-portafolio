@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/components/offcanvas.css";
 import spotifyLogo from "../assets/images/spotify.png";
 import openAiLogo from "../assets/images/openia-crop.png";
+import listenOnSpotify from "../assets/images/listen-on-spotify.png";
 import offcanvasBg from "../assets/images/man-4807395_1920.jpg";
 import axios from "axios";
 import { TrackUrisContext } from "../App";
@@ -164,8 +165,8 @@ function OffcanvasComponent() {
                   className="w-50"
                 />
                 {/* <Form.Text>
-                  Describe in your own words how you feel today
-                </Form.Text> */}
+								Describe in your own words how you feel today
+							</Form.Text> */}
               </Form.Group>
               <Form.Group className="d-flex flex-row align-items-center gap-4 justify-content-between w-100">
                 <Form.Label>Activity</Form.Label>
@@ -180,7 +181,10 @@ function OffcanvasComponent() {
                 />
                 {/* <Form.Text>Tell me what you are doing right now</Form.Text> */}
               </Form.Group>
-              <Button type="submit" className="btn w-50 align-self-center mt-3">
+              <Button
+                type="submit"
+                className="create-btn btn w-50 align-self-center mt-3"
+              >
                 {showSpinner && (
                   <Spinner
                     animation="grow"
@@ -195,11 +199,14 @@ function OffcanvasComponent() {
               </Button>
             </Form>
             {showPlaylist && (
-              <div>
+              <div className="d-flex flex-column align-items-center">
                 <Playlist songs={playlist}></Playlist>
-                <button onClick={handlePlayOnSpotify} disabled={loading}>
-                  {loading ? "Generating..." : "Listen on Spotify"}
-                </button>
+                <img
+                  onClick={handlePlayOnSpotify}
+                  alt=""
+                  className="spotify-btn"
+                  src={listenOnSpotify}
+                ></img>
               </div>
             )}
             {showError && (
