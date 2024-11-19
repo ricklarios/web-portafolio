@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useContext } from "react";
 import { TrackUrisContext } from "../App";
+import "../styles/callback.css";
+import spotifyLogo from "../assets/images/spotify.png";
 
 const Callback = () => {
   const { trackUris, token, setToken } = useContext(TrackUrisContext);
@@ -71,7 +73,12 @@ const Callback = () => {
     }
   }, [token]);
 
-  return <div>Processing Spotify Login...</div>;
+  return (
+    <div className="processing text-center">
+      <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo mt-5" />
+      <h1 className="p-5">Processing Spotify Playlist...</h1>
+    </div>
+  );
 };
 
 export default Callback;
