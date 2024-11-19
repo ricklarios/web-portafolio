@@ -1,24 +1,28 @@
 .playlist-container {
     background-color: rgb(0, 0, 0, 0.5);
     padding: 10px;
-    border-radius: 10px;  
-}
-.playlist-container h2 {
-font-size: 0.8vw;
+    border-radius: 10px;
+    width: 325px;
+;}
+.playlist-container > h2 {
+font-size: 1.7rem;
 font-family: "Oswald", cursive;
 font-weight: 600;
-/* background-image: linear-gradient(to bottom, #01e63e 0%, #01cb37 10%, #01a42c 100%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent; */
-
+}
+.playlist-container .index {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    padding: 1px;
+    color: #a8c5e0;
 }
 .title-artist :first-child {
     font-family: "Roboto", sans-serif;
-    font-size: 0.9vw;
+    font-size: 0.9rem;
     padding: 1px;
+    color: #E4E5EA;
 }
 .title-artist :nth-child(2) {
     font-family: "Roboto", sans-serif;
     font-size: 0.8vw;
+    color: #8cb7df;
 }

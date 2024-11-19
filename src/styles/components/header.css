@@ -8,7 +8,9 @@
     height: 65px;
     width: 100%;
     border-bottom: 1px solid #a7a7a785;
-    background-image: radial-gradient(circle at 120.71% 50%, #6c3f60 0, #61355d 16.67%, #542a5b 33.33%, #441f59 50%, #301657 66.67%, #121056 83.33%, #02315E 100%);
+    background-image: radial-gradient(circle at 50% 16.99%, #39516a 0, #1d2f3b 50%, #16354D 100%);
+    /* background-color: #16354D; */
+    color: #E4E5EA;
 }
 .header nav {
     height: 100%;
@@ -37,7 +39,8 @@
 }
 
 .nav-list button:hover {
-    background-color: #1b2f3fe2;
-    color: #d07afe;
+    background-color: #6B99C3;
+    color: #16354D;
+     font-weight: 400;
 }
 

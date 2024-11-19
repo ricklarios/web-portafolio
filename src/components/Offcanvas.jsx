@@ -179,10 +179,7 @@ function OffcanvasComponent() {
                 />
                 {/* <Form.Text>Tell me what you are doing right now</Form.Text> */}
               </Form.Group>
-              <Button
-                type="submit"
-                className="create-btn btn w-50 align-self-center mt-3"
-              >
+              <Button type="submit" className="btn w-50 align-self-center mt-3">
                 {showSpinner && (
                   <Spinner
                     animation="grow"
@@ -198,13 +195,13 @@ function OffcanvasComponent() {
             </Form>
             {showPlaylist && (
               <div className="d-flex flex-column align-items-center">
+                <Playlist songs={playlist}></Playlist>
                 <img
                   onClick={handlePlayOnSpotify}
                   alt=""
                   className="spotify-btn m-3"
                   src={listenOnSpotify}
                 ></img>
-                <Playlist songs={playlist}></Playlist>
               </div>
             )}
             {showError && (

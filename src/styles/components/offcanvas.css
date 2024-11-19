@@ -17,7 +17,7 @@
 }
 .offcanvas-component .offcanvas-title {
     font-family: "Oswald", cursive;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     font-weight: 500;
     font-style: normal;
     /* background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
@@ -27,7 +27,7 @@
     text-shadow: none;
     margin: 0;
 }
-.offcanvas-component .btn {
+.offcanvas-component .btn, .offcanvas-expand .btn {
     background-color: #00457E;
     border-color: #a7a7a757;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
@@ -35,7 +35,7 @@
     font-size: 0.9rem;
     font-weight: 600;
 }
-.offcanvas-component .btn:hover {
+.offcanvas-component .btn:hover, .offcanvas-expand .btn:hover {
         background-color: #0058A9;
         border-color: #a7a7a7;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -79,16 +79,17 @@
     font-family: "Oswald", cursive;
     font-size: 2rem;
     font-weight: 600;
-    text-align: center;
+    padding-inline: 10px;
+    color: #E4E5EA;
     /* background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-    text-shadow: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.523);
     margin: 0;
 }
 .offcanvas-expand .offcanvas-bg {
-    background: linear-gradient(to bottom, #034684dc 0%, #022454 100%);
+    background: linear-gradient(to bottom, #315374e4 0%, #1a3148 50%, #0d1f2d 100%);
     height: 500%;
 }
 .offcanvas-expand .offcanvas-body {
@@ -96,20 +97,28 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 20px;
+    padding: 30px;
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
+    overflow: hidden;
 }
 .offcanvas-expand p {
     margin: 0;
 }
+.offcanvas-expand form {
+    margin-top: 15px;
+}
 .offcanvas-expand .create-btn {
-    border: 1px solid #a7a7a7;
-    /* background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%); */
+    background-color: #00457E;
+    border-color: #a7a7a757;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 .offcanvas-expand .create-btn:hover {
     /* background-image: linear-gradient(to bottom, #ffab23 0%, #ff991d 10%, #ff7a15 100%); */
+    background-color: #476785;
     border: 1px solid #e6e7eb;
 }
 .offcanvas-expand .spotify-btn  {
@@ -122,6 +131,10 @@
 }
 .offcanvas-expand .form-label {
     font-weight: 600;
+}
+.offcanvas-expand .form-control {
+    color: #0C151C;
+    background-color: #E4E5EA;
 }
 .offcanvas-expand .form-text {
     color:#e6e7eb;
@@ -141,8 +154,8 @@
         margin: 0;
     }
 
-    .offcanvas-component h1 {
-        font-size: 1.5vw;
+    .offcanvas-component  .offcanvas-title {
+        font-size: 2vw;
         margin: 0;
         padding: 0 10px;
     }
@@ -176,10 +189,6 @@
         gap: 10px;
         height: 3vh;
         align-self: center;
-    }
-
-    .openai-logo {
-        
     }
 }
 

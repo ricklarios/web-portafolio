@@ -17,7 +17,7 @@
     margin: auto;
 }
 .main-section h1 {
-    text-shadow: 0px 0px 10px #000000;
+    /* text-shadow: 0px 0px 10px #000000; */
 }
 .out-of-view {
     position: fixed;
