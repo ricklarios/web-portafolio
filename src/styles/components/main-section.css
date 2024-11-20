@@ -62,6 +62,7 @@
 @media (max-width: 1024px) {
     .main-section {
         gap: 5vh;
+        margin-top: 5vw;
     }
     .main-section .contact-component{
         margin-top: 0;

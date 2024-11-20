@@ -2,8 +2,28 @@ import React from "react";
 import "../styles/components/header.css";
 
 const Header = ({ scrollToSection, refs }) => {
+  const handleToggle = () => {
+    const navList = document.querySelector(".nav-list");
+    navList.classList.toggle("visible");
+    document.addEventListener("click", (event) => {
+      const navList = document.querySelector(".nav-list");
+      if (
+        !navList.contains(event.target) &&
+        !event.target.closest(".toggler-container")
+      ) {
+        navList.classList.remove("visible");
+      }
+    });
+  };
   return (
     <header className="header">
+      <div className="toggler-container" onClick={handleToggle}>
+        <div className="toggler">
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+      </div>
       <nav>
         <ul className="nav-list">
           <li>
