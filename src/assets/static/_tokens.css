@@ -1,0 +1,10 @@
+:root {
+  --color-dark: #0C151C;
+  --color-light: #E4E5EA;
+  --color-blue-dark: #16354D;
+  --color-blue-light: #6B99C3;
+  --color-gray: #D2D2D4;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: "Oswald", cursive;
+  --font-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

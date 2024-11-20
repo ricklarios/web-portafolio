@@ -1,6 +1,9 @@
+@import '../assets/static/_tokens.css';
+
 .App {
   width: 100%;
   /* background-image: radial-gradient(circle at 120.71% 50%, #6c3f60 0, #61355d 16.67%, #542a5b 33.33%, #441f59 50%, #301657 66.67%, #121056 83.33%, #02315E 100%); */
-  background-color: #16354D;
-  color: #E4E5EA;
+  background-color: var(--color-blue-dark);
+  color: var(--color-light);
+  font-family: var(--font-primary);
 }
