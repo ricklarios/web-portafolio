@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../../assets/static/_tokens.css');
+
 .offcanvas-component {
     position: absolute;
     top: 20px;
@@ -12,11 +13,12 @@
     align-items: center;
     gap: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: #e6e7eb;
+    color: var(--color-light);
     z-index: 100;
+    
 }
 .offcanvas-component .offcanvas-title {
-    font-family: "Oswald", cursive;
+    font-family: var(--font-secondary);
     font-size: 1.5vw;
     font-weight: 500;
     font-style: normal;
@@ -28,26 +30,26 @@
     margin: 0;
 }
 .offcanvas-component .btn, .offcanvas-expand .btn {
-    background-color: #00457E;
+    background-color: var(--color-blue-dark);
     border-color: #a7a7a757;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     font-size: 0.9rem;
     font-weight: 600;
 }
 .offcanvas-component .btn:hover, .offcanvas-expand .btn:hover {
-        background-color: #0058A9;
-        border-color: #a7a7a7;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--color-blue-light);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: var(--color-blue-dark);
 }
 .offcanvas-component p {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     font-size: 0.9rem;
     margin-bottom: 15px;
 }
 
 .offcanvas-component h2 {
-    font-family: "Oswald", cursive;
+    font-family: var(--font-secondary);
     font-size: 1rem;
     font-weight: 500;
     font-style: normal;
@@ -69,18 +71,17 @@
 
 
 .offcanvas-expand {
-    background-size: 50vw;
+    background-size: 200%;
     background-position: top;
     background-position-x: -200px;
     height: 100%;
-    color: #e6e7eb;
+    color: var(--color-light);
 }
 .offcanvas-expand .offcanvas-title{
-    font-family: "Oswald", cursive;
+    font-family: var(--font-secondary);
     font-size: 2rem;
     font-weight: 600;
     padding-inline: 10px;
-    color: #E4E5EA;
     /* background-image: linear-gradient(to bottom, #e68e01 0%, #e58d00 10%, #e36200 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -89,7 +90,7 @@
     margin: 0;
 }
 .offcanvas-expand .offcanvas-bg {
-    background: linear-gradient(to bottom, #315374e4 0%, #1a3148 50%, #0d1f2d 100%);
+    background: linear-gradient(to bottom, #315274d0 0%, #1a3148e4 50%, #0d1f2d 100%);
     height: 500%;
 }
 .offcanvas-expand .offcanvas-body {
@@ -98,9 +99,9 @@
     align-items: center;
     gap: 10px;
     padding: 30px;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     font-size: 1rem;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .offcanvas-expand p {
     margin: 0;
@@ -108,23 +109,11 @@
 .offcanvas-expand form {
     margin-top: 15px;
 }
-.offcanvas-expand .create-btn {
-    background-color: #00457E;
-    border-color: #a7a7a757;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
-    font-family: "Roboto", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-.offcanvas-expand .create-btn:hover {
-    /* background-image: linear-gradient(to bottom, #ffab23 0%, #ff991d 10%, #ff7a15 100%); */
-    background-color: #476785;
-    border: 1px solid #e6e7eb;
-}
+
 .offcanvas-expand .spotify-btn  {
     color: #e6e7eb;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-    width: 10vw;
+    width: 40%;
 }
 .offcanvas-expand .spotify-btn:hover {
     filter: brightness(1.2);

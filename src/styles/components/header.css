@@ -1,5 +1,5 @@
 .header {
-    --toggler-size: 3.5vw;
+    --toggler-size: 25px;
 }
 
 .header {
@@ -21,7 +21,7 @@
 }
 .header .toggler-container {
     position: absolute;
-    left: 1vw;
+    left: 5px;
     display: none;
     justify-content: flex-end;
     align-items: center;
@@ -60,12 +60,12 @@ header:has(.nav-list.visible) .toggler-container .toggler .bar {
     height: 100%;
     display: flex;
     flex-direction: row;    
-    justify-content: center;
+    justify-content: right;
     align-items: end;
     gap: 2vw;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-right: 5vw;
 }
 .nav-list button {
     padding: 12px 15px 15px 15px;
@@ -92,7 +92,11 @@ header:has(.nav-list.visible) .toggler-container .toggler .bar {
 
 @media screen and (max-width: 1024px) {
     .header {
-        height: 5vw;
+        height: 35px;
+    }
+    .header .toggler-contianer .toggler {
+        width: 30px;
+        height: 30px;
     }
     .nav-list {
         gap: 1vw;
@@ -106,6 +110,10 @@ header:has(.nav-list.visible) .toggler-container .toggler .bar {
 @media screen and (max-width: 768px) {
     .header .toggler-container {
         display: flex;
+    }
+    .header .toggler-contianer .toggler {
+        width: 30px;
+        height: 30px;
     }
     .header nav {
     height: auto;
@@ -121,9 +129,9 @@ header:has(.nav-list.visible) .toggler-container .toggler .bar {
         flex-direction: column;
         align-items: start;
         position: absolute;
-        top: 5vw;
+        top: 35px;
         left: 0;
-        width: 17%;
+        width: 120px;
         height: fit-content;
         background-color: #16354D;
         z-index: 1000;

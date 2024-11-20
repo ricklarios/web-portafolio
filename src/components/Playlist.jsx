@@ -9,9 +9,9 @@ const Playlist = ({ songs }) => {
         {songs.map((song, index) => (
           <div key={index} className="d-flex flex-row gap-3 mb-1">
             <p className="index">{index + 1}</p>
-            <div className="title-artist w-100 m-0 d-flex flex-row flex-wrap justify-content-start align-items-center gap-1">
+            <div className="title-artist w-100 m-0 d-flex flex-row flex-wrap justify-content-start align-items-end gap-1">
               <p className="">{song.name}</p>
-              <p className="text-end">{song.artists[0].name}</p>
+              <p className="text-end p-0 m-0">{song.artists[0].name}</p>
             </div>
           </div>
         ))}
