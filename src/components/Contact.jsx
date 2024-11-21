@@ -32,13 +32,19 @@ const Contact = forwardRef((props, ref) => {
               navigator.clipboard.writeText(texts.contacto.email);
               handleAlert();
             }}
+            title="Copy email to clipboard"
           />
           <a
             href={`mailto:${texts.contacto.email}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={sendIcon} alt="send icon" className="icon" />
+            <img
+              src={sendIcon}
+              alt="send icon"
+              className="icon"
+              title="Send email"
+            />
           </a>
           {showAlert && (
             <Alert className="alert-span">Email copied to clipboard!</Alert>
