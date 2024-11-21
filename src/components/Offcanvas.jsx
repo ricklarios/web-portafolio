@@ -103,7 +103,9 @@ function OffcanvasComponent() {
 
   return (
     <div className="offcanvas-component">
-      <h1 className="offcanvas-title text-center">Your Mood, My Playlist</h1>
+      <h1 className="offcanvas-title text-center">
+        Your Mood, my pl<span className="ai-span">AI</span>list
+      </h1>
       <div className="btn btn-primary w-75" onClick={handleShow}>
         Create Playlist
       </div>
@@ -130,7 +132,7 @@ function OffcanvasComponent() {
         <div className="offcanvas-bg">
           <Offcanvas.Header>
             <Offcanvas.Title>
-              <h1 className="offcanvas-title">Your Mood, My Playlist</h1>
+              Your Mood, my pl<span className="ai-span">AI</span>list
             </Offcanvas.Title>
             <button
               type="button"
@@ -185,7 +187,7 @@ function OffcanvasComponent() {
                     animation="grow"
                     size="sm"
                     role="status"
-                    className="me-2"
+                    className="me-2 align-middle"
                   >
                     <span className="visually-hidden">Loading...</span>
                   </Spinner>

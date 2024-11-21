@@ -1,10 +1,16 @@
+@import url('../../assets/static/_tokens.css');
+
 .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 25px;
-    scroll-margin-top: 10vw;    
+    scroll-margin-top: 10vw;   
+    white-space: pre-line; 
+    font-family: var(--font-primary);
+    font-weight: 300;
+    font-size: 1rem;
 }
 
 @media (max-width: 1024px) {

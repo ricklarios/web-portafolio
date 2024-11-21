@@ -1,3 +1,5 @@
+@import url('../../assets/static/_tokens.css');
+
 .playlist-container {
     background-color: rgb(0, 0, 0, 0.5);
     padding: 10px;
@@ -5,7 +7,7 @@
     width: 325px;
 ;}
 .playlist-container > h2 {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     font-family: "Oswald", cursive;
     font-weight: 600;
 }
@@ -13,16 +15,18 @@
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
     padding: 1px;
-    color: #a8c5e0;
+    width: 5%;
+    color: var(--color-blue-light);
+    text-align: right;
 }
 .title-artist :first-child {
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
     padding: 1px;
-    color: #E4E5EA;
+    color: var(--color-light);
 }
 .title-artist :nth-child(2) {
     font-family: "Roboto", sans-serif;
     font-size: 0.7rem;
-    color: #8cb7df;
+    color: var(--color-blue-light);
 }
