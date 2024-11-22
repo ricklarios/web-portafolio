@@ -22,7 +22,7 @@ const Contact = forwardRef((props, ref) => {
       <div className="contact-text-container">
         <h1 className="contact-title">&lt;Contact/&gt;</h1>
         <p>{texts.contacto.name}</p>
-        <p className="d-flex flex-row">
+        <p className="d-flex flex-row flex-wrap justify-content-center gap-2 align-items-end">
           {texts.contacto.email}
           <img
             src={copyIcon}

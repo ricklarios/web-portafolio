@@ -164,9 +164,6 @@ function OffcanvasComponent() {
                   onChange={handleMoodChange}
                   className="w-50"
                 />
-                {/* <Form.Text>
-								Describe in your own words how you feel today
-							</Form.Text> */}
               </Form.Group>
               <Form.Group className="d-flex flex-row align-items-center gap-4 justify-content-between w-100">
                 <Form.Label>Activity</Form.Label>
@@ -179,7 +176,6 @@ function OffcanvasComponent() {
                   onChange={handleActivityChange}
                   className="w-50"
                 />
-                {/* <Form.Text>Tell me what you are doing right now</Form.Text> */}
               </Form.Group>
               <Button type="submit" className="btn w-50 align-self-center mt-3">
                 {showSpinner && (
