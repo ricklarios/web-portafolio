@@ -1,12 +1,13 @@
 @import url('../../assets/static/_tokens.css');
 
 .contact-component {
+    align-self: flex-start;
     position: relative;
-    padding-top: 5vh;
+    padding: 5vh;
     display: flex;
     flex-direction: row;    
     gap: 5vw;
-    align-items: center;
+    align-items: start;
     justify-content: left;
     scroll-margin-top: 15vw;
     
@@ -56,12 +57,6 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0px 10px 13px -7px #0000007c, 5px 5px 15px 5px rgba(0,0,0,0);
-}
-.contact-avatar {
-    border-radius: 8px;
-    width: 150px;
-    margin-bottom: 10px;
-    box-shadow: 0px 10px 13px -7px #00000075, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 .contact-linkedin-logo {
     margin-top: 10px;

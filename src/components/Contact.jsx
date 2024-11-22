@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from "react";
-import "../styles/components/contact.css"; // Assuming you will add some styles
-import avatar from "../assets/images/Profile new.png";
+import "../styles/components/contact.css";
+//import avatar from "../assets/images/Profile new.png";
 import linkedinLogo from "../assets/images/linkedin.jpg";
 import copyIcon from "../assets/images/copy-icon.png";
 import sendIcon from "../assets/images/send-icon.png";
@@ -18,7 +18,7 @@ const Contact = forwardRef((props, ref) => {
   };
   return (
     <div ref={ref} id="contact" className="contact-component">
-      <img src={avatar} alt="Avatar" className="contact-avatar" />
+      {/* <img src={avatar} alt="Avatar" className="contact-avatar" /> */}
       <div className="contact-text-container">
         <h1 className="contact-title">&lt;Contact/&gt;</h1>
         <p>{texts.contacto.name}</p>

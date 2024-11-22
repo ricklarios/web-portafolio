@@ -36,9 +36,9 @@ const MainSection = ({ refs }) => {
   return (
     <main className="main-section">
       <OffcanvasComponent />
-      <div ref={divRef}>
-        <Contact ref={refs.contactRef} />
-      </div>
+      {/* <div ref={divRef} className="w-100"> */}
+      <Contact ref={refs.contactRef} />
+      {/*  </div> */}
       <About ref={refs.aboutRef} />
       <Projects ref={refs.projectsRef} />
       <Education ref={refs.educationRef} />

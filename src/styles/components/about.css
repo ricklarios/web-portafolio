@@ -3,9 +3,6 @@
 .about {
     scroll-margin-top: 10vw;   
     white-space: pre-line; 
-    font-family: var(--font-primary);
-    font-weight: 300;
-    font-size: 1rem;
     height: auto;
     padding: 5vh 10vw;
     position: relative;
@@ -27,13 +24,19 @@
     filter: grayscale(100%) opacity(0.1);
     position: absolute;
 }
+.about .contact-avatar {
+    filter: grayscale(10%);
+    width: 150px;
+    margin-bottom: 10px;
+    box-shadow: 0px 10px 13px -7px #00000075, 5px 5px 15px 5px rgba(0,0,0,0);
+}
 .about div {
     z-index: 1;
     position: relative;
     top: 0;
-    padding-left: 50%;
 }
 .about p{
+        font-family: var(--font-primary);
     font-size: 1.2vw;
     font-weight: 300;
     line-height: 1.5;
