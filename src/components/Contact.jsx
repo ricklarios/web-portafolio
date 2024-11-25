@@ -17,7 +17,7 @@ const Contact = forwardRef((props, ref) => {
     }, 2000);
   };
   return (
-    <div ref={ref} id="contact" className="contact-component">
+    <div ref={ref} id="contact" className="contact-component align-self-center">
       {/* <img src={avatar} alt="Avatar" className="contact-avatar" /> */}
       <div className="contact-text-container">
         <h1 className="contact-title">&lt;Contact/&gt;</h1>

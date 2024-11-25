@@ -1,9 +1,8 @@
 @import url('../../assets/static/_tokens.css');
 
 .contact-component {
-    align-self: flex-start;
+    align-self: start;
     position: relative;
-    padding: 5vh;
     display: flex;
     flex-direction: row;    
     gap: 5vw;
@@ -93,6 +92,7 @@
 }
 @media (max-width: 1024px) {
     .contact-component {
+        position: relative;
         padding-top: 0;
     }
     

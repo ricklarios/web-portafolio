@@ -34,10 +34,11 @@
     z-index: 1;
     position: relative;
     top: 0;
+    max-height: 900px;
 }
 .about p{
     font-family: var(--font-primary);
-    font-size: 1.2vw;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
     margin: 0;
