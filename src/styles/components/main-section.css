@@ -57,6 +57,12 @@
         gap: 5vh;
         margin-top: 45px;
     }
+    .main-section .contact-offcanvas {
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: left !important;
+        gap: 3vw !important;
+    }
     .main-section .contact-component{
         margin-top: 0;
     }

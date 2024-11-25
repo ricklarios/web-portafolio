@@ -6,10 +6,37 @@
     border-radius: 10px;
     width: 325px;
 ;}
-.playlist-container > h2 {
+.playlist-container .floating-label label{
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 5px;
+    background-color: transparent !important;
+}
+
+.playlist-container .form-control:not(:placeholder-shown)~label::after,
+.playlist-container .form-control~label,
+.playlist-container .form-control:focus~label::after
+ {
+    color: var(--color-gray-dark) !important;
+    background-color: transparent !important;
+}
+.playlist-container .form-control.playlist-name-input {
     font-size: 1.2rem;
     font-family: "Oswald", cursive;
     font-weight: 600;
+    background-color: transparent;
+    border: 2px solid var(--color-blue-dark);
+    color: var(--color-light);
+    margin-bottom: 10px;
+}
+.playlist-container .form-control.playlist-name-input::placeholder {
+  color: var(--color-gray-dark);
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 .playlist-container .index {
     font-family: "Roboto", sans-serif;

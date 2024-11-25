@@ -14,6 +14,9 @@ function TrackUrisProvider({ children }) {
   const [token, setToken] = useState(() => {
     return localStorage.getItem("spotifyToken") || null;
   });
+  const [playlistName, setPlaylistName] = useState(() => {
+    return localStorage.getItem("playlistName") || "";
+  });
   // Guardar `trackUris` en localStorage cada vez que cambien
   useEffect(() => {
     localStorage.setItem("trackUris", JSON.stringify(trackUris));
@@ -25,10 +28,22 @@ function TrackUrisProvider({ children }) {
       localStorage.setItem("spotifyToken", token);
     }
   }, [token]);
+  useEffect(() => {
+    if (playlistName) {
+      localStorage.setItem("playlistName", playlistName);
+    }
+  }, [playlistName]);
 
   return (
     <TrackUrisContext.Provider
-      value={{ trackUris, setTrackUris, token, setToken }}
+      value={{
+        trackUris,
+        setTrackUris,
+        token,
+        setToken,
+        playlistName,
+        setPlaylistName,
+      }}
     >
       {children}
     </TrackUrisContext.Provider>

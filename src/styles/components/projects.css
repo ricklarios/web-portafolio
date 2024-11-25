@@ -1,17 +1,15 @@
 .projects {
-    scroll-margin-top: 10vw;   
+    scroll-margin-top: 10vw;
+    width: 100%;
+    max-width: 1400px;
 }
 .projects h1 {
     margin-bottom: 5vh;
-
+    margin-left: 5vw;
 }
 
 .projects-container {
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    border: 1px solid #e0e0e094;
-    border-radius: 10px;
-    padding: 2vh;
-    background-color: #0f142494;
 }

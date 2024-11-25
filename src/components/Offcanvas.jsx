@@ -20,8 +20,9 @@ function OffcanvasComponent() {
   const [showPlaylist, setShowPlaylist] = useState(false);
   const [playlist, setPlaylist] = useState(null);
   const [showError, setShowError] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const { setTrackUris } = React.useContext(TrackUrisContext);
+
+  const { setTrackUris, playlistName, setPlaylistName } =
+    React.useContext(TrackUrisContext);
 
   useEffect(() => {
     localStorage.setItem("mood", mood);
@@ -94,7 +95,6 @@ function OffcanvasComponent() {
     window.location.href = AUTH_URL; // Redirige al usuario a Spotify
   };
   const handlePlayOnSpotify = async () => {
-    setLoading(true);
     handleLogin();
   };
 
@@ -162,7 +162,7 @@ function OffcanvasComponent() {
                   size="sm"
                   value={mood}
                   onChange={handleMoodChange}
-                  className="w-50"
+                  className="mood w-50"
                 />
               </Form.Group>
               <Form.Group className="d-flex flex-row align-items-center gap-4 justify-content-between w-100">
@@ -174,7 +174,7 @@ function OffcanvasComponent() {
                   placeholder="What you are doing right now?"
                   value={activity}
                   onChange={handleActivityChange}
-                  className="w-50"
+                  className="activity w-50"
                 />
               </Form.Group>
               <Button type="submit" className="btn w-50 align-self-center mt-3">
@@ -193,7 +193,11 @@ function OffcanvasComponent() {
             </Form>
             {showPlaylist && (
               <div className="d-flex flex-column align-items-center">
-                <Playlist songs={playlist}></Playlist>
+                <Playlist
+                  songs={playlist}
+                  setPlaylistName={setPlaylistName}
+                  playlistName={playlistName}
+                ></Playlist>
                 <img
                   onClick={handlePlayOnSpotify}
                   alt=""

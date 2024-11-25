@@ -6,9 +6,9 @@ import "../styles/callback.css";
 import spotifyLogo from "../assets/images/spotify.png";
 
 const Callback = () => {
-  const { trackUris, token, setToken } = useContext(TrackUrisContext);
-  const [isCodeProcessed, setIsCodeProcessed] = useState(false); // Bandera
-  const [isPlaylistCreated, setIsPlaylistCreated] = useState(false);
+  const { trackUris, token, setToken, playlistName } =
+    useContext(TrackUrisContext);
+  const [isCodeProcessed, setIsCodeProcessed] = useState(false);
 
   const getAuthorizationCode = () => {
     const params = new URLSearchParams(window.location.search);
@@ -21,6 +21,7 @@ const Callback = () => {
         {
           trackUris,
           userAccessToken: token.access_token, // Aquí envías el token
+          playlistName: playlistName || "My Playlist", // Aquí envías el nombre de la playlist
         }
       );
       const spotifyUrl = response.data.url;

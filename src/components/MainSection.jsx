@@ -35,9 +35,11 @@ const MainSection = ({ refs }) => {
 
   return (
     <main className="main-section">
-      <OffcanvasComponent />
+      <div className="contact-offcanvas w-100 d-flex flex-row-reverse justify-content-between align-items-center flex-wrap m-5 px-5">
+        <OffcanvasComponent />
+        <Contact ref={refs.contactRef} />
+      </div>
       {/* <div ref={divRef} className="w-100"> */}
-      <Contact ref={refs.contactRef} />
       {/*  </div> */}
       <About ref={refs.aboutRef} />
       <Projects ref={refs.projectsRef} />
