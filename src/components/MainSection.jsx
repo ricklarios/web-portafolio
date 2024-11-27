@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Education from "./Education";
 import Projects from "./Projects";
 import OffcanvasComponent from "./Offcanvas";
+import retrato from "../assets/images/autoretrato2.png";
 
 const MainSection = ({ refs }) => {
   const divRef = useRef(null);
@@ -47,6 +48,9 @@ const MainSection = ({ refs }) => {
       {showAlert && (
         <Alert className="alert-span">Email copied to clipboard!</Alert>
       )}
+      <div className="portrait-container">
+        <img className="portrait" src={retrato} alt="Rick Larios"></img>
+      </div>
       <div className="contact-offcanvas w-100 d-flex flex-row-reverse justify-content-between align-items-center flex-wrap m-5 px-5">
         <OffcanvasComponent />
         <Contact ref={refs.contactRef} handleAlert={handleAlert} />
