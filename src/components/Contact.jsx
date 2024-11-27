@@ -5,19 +5,10 @@ import linkedinLogo from "../assets/images/linkedin.jpg";
 import copyIcon from "../assets/images/copy-icon.png";
 import sendIcon from "../assets/images/send-icon.png";
 import texts from "../utils/data";
-import { Alert } from "react-bootstrap";
 
 const Contact = forwardRef((props, ref) => {
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleAlert = () => {
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 2000);
-  };
   return (
-    <div ref={ref} id="contact" className="contact-component align-self-center">
+    <div ref={ref} id="contact" className="contact-component align-self-start">
       {/* <img src={avatar} alt="Avatar" className="contact-avatar" /> */}
       <div className="contact-text-container">
         <h1 className="contact-title">&lt;Contact/&gt;</h1>
@@ -30,7 +21,7 @@ const Contact = forwardRef((props, ref) => {
             className="icon"
             onClick={() => {
               navigator.clipboard.writeText(texts.contacto.email);
-              handleAlert();
+              props.handleAlert();
             }}
             title="Copy email to clipboard"
           />
@@ -46,9 +37,6 @@ const Contact = forwardRef((props, ref) => {
               title="Send email"
             />
           </a>
-          {showAlert && (
-            <Alert className="alert-span">Email copied to clipboard!</Alert>
-          )}
         </p>
         <a
           href="https://www.linkedin.com/in/ricklarios/"

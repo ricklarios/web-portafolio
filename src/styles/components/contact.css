@@ -39,24 +39,7 @@
     filter: brightness(2);
     cursor: pointer;
 }
-.contact-component .contact-text-container .alert-span {
-    position: absolute;
-    z-index: 1000;
-    top: 10vh;
-    left: 0;
-    height: 40px;
-    width: 200px;
-    background-color: var(--color-blue-hover);
-    border-color: #555c64;
-    color:#e6e7eb;
-    font: 0.8rem var(--font-secondary), sans-serif; 
-    font-weight: 500;
-    padding-inline: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 10px 13px -7px #0000007c, 5px 5px 15px 5px rgba(0,0,0,0);
-}
+
 .contact-linkedin-logo {
     margin-top: 10px;
     width: 80px;
@@ -94,6 +77,7 @@
     .contact-component {
         position: relative;
         padding-top: 0;
+        margin-left: 20px;
     }
     
     .contact-component p {
@@ -106,11 +90,11 @@
 @media (max-width: 768px) {
     .contact-component {
         flex-direction: row;
-        padding-top: 4vh;
         gap: 3vh;
     }
     .contact-text-container {
         gap: 0.5rem;
+        
     }
     .contact-component p {
         font-size: 0.9rem;

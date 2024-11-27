@@ -12,6 +12,24 @@
 .main-section h1 {
     font-family: var(--font-secondary);
 }
+.main-section .alert-span {
+    position: absolute;
+    z-index: 1000;
+    top: 2vh;
+    align-self: center;
+    height: 40px;
+    width: 200px;
+    background-color: var(--color-blue-trans);
+    border-color: #555c64;
+    color:#e6e7eb;
+    font: 0.8rem var(--font-secondary), sans-serif; 
+    font-weight: 500;
+    padding-inline: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 13px -7px #0000007c, 5px 5px 15px 5px rgba(0,0,0,0);
+}
 .out-of-view {
     position: fixed;
     top: 80px;
@@ -66,7 +84,9 @@
     .main-section .contact-component{
         margin-top: 0;
     }
-
+    .main-section .alert-span {
+        top: 5vh;
+    }
     .out-of-view  {
         padding: 0;
         margin: 0;
