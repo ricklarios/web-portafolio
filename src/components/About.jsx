@@ -8,11 +8,8 @@ const About = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="about">
       <img src={studioBg} alt="studio bg" className="studio-bg"></img>
-      <div className="d-flex  flex-row flex-wrap align-items-start">
-        <div className="w-50 h-100">
-          {/* <img src={avatar} alt="Avatar" className="contact-avatar w-75" /> */}
-        </div>
-        <div className="w-50">
+      <div className="d-flex  flex-row flex-wrap align-items-start justify-content-end">
+        <div className="text-content w-50">
           <h1 style={{ position: "relative", zIndex: 1 }}>
             {texts.aboutMe.title}
           </h1>
