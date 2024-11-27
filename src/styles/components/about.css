@@ -13,7 +13,6 @@
 }
 .about .studio-bg {
     display: block;
-    transition: all 0.5s ease;
     top: 0;
     left: 0;
     width: 100%;
@@ -23,6 +22,7 @@
     z-index: 0;
     filter: grayscale(100%) opacity(0.1);
     position: absolute;
+    transition: all 0.5s ease;
 }
 .about .contact-avatar {
     filter: grayscale(10%);

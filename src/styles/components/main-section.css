@@ -6,8 +6,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5vh;
+    gap: 15vh;
     width: 100%;
+}
+.main-section * {
+    max-width: 1920px;
 }
 .main-section h1 {
     font-family: var(--font-secondary);
@@ -39,16 +42,19 @@
     height: 35vh;
     overflow: hidden;
 }
-.main-section .portrait {
-    display: block;
-    transition: all 0.5s ease;
+.main-section .portrait-container {
+    display: flex;
+    align-items: center;
+
+}
+.main-section .portrait-container .portrait {
     top: 0;
     left: 0;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
     z-index: 0;
     filter: grayscale(100%) opacity(0.1);
+    
+    transition: all 0.5s ease;
 }
 .out-of-view {
     position: fixed;
