@@ -36,18 +36,19 @@ const texts = {
             },
         ],
     },
-    proyectos: [
-        {
-            nombre: "Proyecto 1",
-            descripcion: "Descripci\u00F3n del Proyecto 1",
+    projects: {
+        mediaset: {
+            title: "Mediaset Projects",
+            description: "The HbbTV department at Mediaset España develops a wide range of interactive applications for Smart TVs on this platform. Projects include MiTele, Canal Digital, LovesTV integration, weather forecast services, and sign language overlays for broadcast content. Additionally, the team has created internal tools and web apps for automating advertising content uploads, manage stream events, video file conversion, and more.",
+            stack: "HbbTV, HTML, CSS, JavaScript, React, Node.js, Express, SQL Server, AWS, Docker, Jenkins, Passport SAML2, Git, Jira",
             link: "https://linkproyecto1.com"
         },
-        {
-            nombre: "Proyecto 2",
+        projectTwo: {
+            title: "Proyecto 2",
             descripcion: "Descripci\u00F3n del Proyecto 2",
             link: "https://linkproyecto2.com"
         }
-    ],
+    },
     footer: {
         copyrigth: "2024 Ricardo Larios. All rights reserved.",
     }

@@ -1,3 +1,5 @@
+@import url('../../assets/static/_tokens.css');
+
 .projects {
     scroll-margin-top: 10vw;
     width: 100%;
@@ -6,6 +8,9 @@
 .projects h1 {
     margin-bottom: 5vh;
     margin-left: 5vw;
+}
+.projects .main-container {
+    overflow: hidden;
 }
 
 .projects-container > * {
@@ -29,21 +34,22 @@
 
 .projects-container > *:hover {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-    scale: 1.1;
+    scale: 1.2;
     z-index: 1000;
     transition: all 0.3s;
 }
 
 .projects-container *:hover .content-container {
-    height: 30vw;
-    visibility:visible;
-    transition: all 0.3s;
+    top: 0;
+    visibility: visible;
+    transition: all 0.5s;
 }
 
 
 .projects-container * .content-container {
     z-index: 1000;
     position: relative;
+    top: -1000px;
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -52,8 +58,24 @@
     width: 30vw;
     max-width: 450px;
     min-width: 200px;
-    height: 0px;
+    height: 30vw;
     max-height: 450px;    
-    background-color: rgba(0, 0, 0, 0.859);
+    background-color: var(--color-blue-dark-trans);
     transition: background-color 0.3s;
+    padding: 10px 20px;
+}
+
+.projects-container * .content-container .title {
+    padding: 0;
+    color: white;
+    margin: 1vh 0;
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.projects-container * .content-container .description {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 300;
 }
