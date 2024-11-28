@@ -6,7 +6,11 @@ const Projects = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="projects">
       <h1>My Projects</h1>
-      <Mediaset />
+      <div className="projects-container d-flex flex-row flex-wrap justify-content-center gap-1">
+        <Mediaset />
+        <Mediaset />
+        <Mediaset />
+      </div>
     </div>
   );
 });
