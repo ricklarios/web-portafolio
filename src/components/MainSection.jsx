@@ -19,7 +19,7 @@ const MainSection = ({ refs }) => {
     setShowAlert(true);
     setTimeout(() => {
       setShowAlert(false);
-    }, 2000);
+    }, 20000);
   };
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const MainSection = ({ refs }) => {
           alt="Rick Larios"
           style={{
             scale: `${scale}`,
-            transition: `all 3s ease`,
+            transition: `all 5s ease`,
           }}
         ></img>
       </div>
@@ -71,13 +71,7 @@ const MainSection = ({ refs }) => {
         className="contact-offcanvas w-100 d-flex flex-row-reverse justify-content-between align-items-center flex-wrap m-5 px-5"
       >
         <OffcanvasComponent />
-        <div
-          className="align-self-start"
-          onMouseEnter={() => setScale(1.2)}
-          onMouseLeave={() => setScale(1.1)}
-        >
-          <Contact ref={refs.contactRef} handleAlert={handleAlert} />
-        </div>
+        <Contact ref={refs.contactRef} handleAlert={handleAlert} />
       </div>
       <About ref={refs.aboutRef} />
       <Projects ref={refs.projectsRef} />
