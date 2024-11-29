@@ -40,6 +40,7 @@
     font-family: var(--font-primary);
     font-size: 0.9rem;
     font-weight: 600;
+    margin-bottom: 30px;
 }
 .offcanvas-component .btn:hover, .offcanvas-expand .btn:hover {
     background-color: var(--color-blue-light);
@@ -156,7 +157,7 @@
         justify-content: space-around;
         margin: 0;
         border-radius: 0;
-        background-color: transparent;
+        background-color: var(--color-blue-dark);
     }
 
     .offcanvas-component .offcanvas-title {
@@ -168,14 +169,15 @@
         font-size: 2vw;
     }
     .offcanvas-component .btn {
-        width: 12vw !important;
+        width: 10vw !important;
         height: 3.5vw !important;
-        font-size: 1.2vw;
+        font-size: 1.1vw;
         align-self: center;        
-        padding: 5px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 0px;
+        padding: 0;
     }
     .offcanvas-component .description {
         display: flex;
@@ -195,7 +197,7 @@
     }
     .offcanvas-component .description-logos {
         gap: 10px;
-        height: 3vh;
+        height: 3vw;
         align-self: center;
     }
 }

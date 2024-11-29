@@ -110,10 +110,10 @@ function OffcanvasComponent() {
         Create Playlist
       </div>
       <div className="description">
-        <p className="text-sm-center lh-sm w-100">
+        {/* <p className="text-sm-center lh-sm w-100">
           Let me inspire you with a playlist specially designed for you, using
           my favorite artists and the mood you choose.
-        </p>
+        </p> */}
         <h2>Based on APIs:</h2>
         <div className="description-logos">
           <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo" />
