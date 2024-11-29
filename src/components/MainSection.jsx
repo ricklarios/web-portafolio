@@ -13,6 +13,7 @@ const MainSection = ({ refs }) => {
   const divRef = useRef(null);
   const [isOutOfView, setIsOutOfView] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const [scale, setScale] = useState(1.1);
 
   const handleAlert = () => {
     setShowAlert(true);
@@ -49,12 +50,34 @@ const MainSection = ({ refs }) => {
       {showAlert && (
         <Alert className="alert-span">Email copied to clipboard!</Alert>
       )}
-      <div className="portrait-container">
-        <img className="portrait" src={studioBg} alt="Rick Larios"></img>
+      <div
+        className="portrait-container"
+        onMouseEnter={() => setScale(1.2)}
+        onMouseLeave={() => setScale(1.1)}
+      >
+        <img
+          className="portrait"
+          src={studioBg}
+          alt="Rick Larios"
+          style={{
+            scale: `${scale}`,
+            transition: `all 3s ease`,
+          }}
+        ></img>
       </div>
-      <div className="contact-offcanvas w-100 d-flex flex-row-reverse justify-content-between align-items-center flex-wrap m-5 px-5">
+      <div
+        onMouseEnter={() => setScale(1.2)}
+        onMouseLeave={() => setScale(1.1)}
+        className="contact-offcanvas w-100 d-flex flex-row-reverse justify-content-between align-items-center flex-wrap m-5 px-5"
+      >
         <OffcanvasComponent />
-        <Contact ref={refs.contactRef} handleAlert={handleAlert} />
+        <div
+          className="align-self-start"
+          onMouseEnter={() => setScale(1.2)}
+          onMouseLeave={() => setScale(1.1)}
+        >
+          <Contact ref={refs.contactRef} handleAlert={handleAlert} />
+        </div>
       </div>
       <About ref={refs.aboutRef} />
       <Projects ref={refs.projectsRef} />

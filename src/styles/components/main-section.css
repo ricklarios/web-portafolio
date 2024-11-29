@@ -44,8 +44,7 @@
 }
 .main-section .portrait-container {
     display: flex;
-    align-items: center;
-
+    align-items: start;
 }
 .main-section .portrait-container .portrait {
     top: 0;
