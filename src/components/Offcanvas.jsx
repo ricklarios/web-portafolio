@@ -103,17 +103,16 @@ function OffcanvasComponent() {
 
   return (
     <div className="offcanvas-component">
-      <h1 className="offcanvas-title text-center">
-        Your Mood, my pl<span className="ai-span">AI</span>list
-      </h1>
+      <p className="offcanvas-hook text-center lh-sm w-100 fs-6 p-0 m-0">
+        Try this functionality!!
+        <h1 className="offcanvas-title text-center">
+          Your Mood, my pl<span className="ai-span">AI</span>list
+        </h1>
+      </p>
       <div className="btn btn-primary w-75" onClick={handleShow}>
         Create Playlist
       </div>
       <div className="description">
-        {/* <p className="text-sm-center lh-sm w-100">
-          Let me inspire you with a playlist specially designed for you, using
-          my favorite artists and the mood you choose.
-        </p> */}
         <h2>Based on APIs:</h2>
         <div className="description-logos">
           <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo" />

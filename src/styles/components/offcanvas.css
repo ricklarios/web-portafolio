@@ -2,14 +2,14 @@
 
 .offcanvas-component {
 
-    max-width: 220px;
+    max-width: 250px;
     background-color: rgba(0, 0, 0, 0.265);
     border-radius: 10px;    
-    padding: 15px;    
+    padding: 20px 15px;    
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 30px;
     /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
     color: var(--color-light);
     z-index: 100;
@@ -17,7 +17,7 @@
 }
 .offcanvas-component .offcanvas-title {
     font-family: var(--font-secondary);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     font-style: normal;
     color: var(--color-gray);
@@ -40,7 +40,7 @@
     font-family: var(--font-primary);
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 30px;
+    
 }
 .offcanvas-component .btn:hover, .offcanvas-expand .btn:hover {
     background-color: var(--color-blue-light);
@@ -160,6 +160,9 @@
         background-color: var(--color-blue-dark);
     }
 
+    .offcanvas-component > .offcanvas-hook {
+        font-size: 1.2vw !important;
+    }
     .offcanvas-component .offcanvas-title {
         font-size: 1.5vw;
         margin: 0;
@@ -203,8 +206,6 @@
 }
 
 @media (max-width: 768px) {
-    .offcanvas-component p {
-        display: none;
-    }
+    
 }
 
