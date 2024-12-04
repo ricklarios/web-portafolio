@@ -103,12 +103,14 @@ function OffcanvasComponent() {
 
   return (
     <div className="offcanvas-component">
-      <p className="offcanvas-hook text-center lh-sm w-100 fs-6 p-0 m-0">
-        Try this functionality!!
+      <div>
+        <p className="offcanvas-hook text-center lh-sm w-100 fs-6 p-0 m-0">
+          Try this functionality!!
+        </p>
         <h1 className="offcanvas-title text-center">
           Your Mood, my pl<span className="ai-span">AI</span>list
         </h1>
-      </p>
+      </div>
       <div className="btn btn-primary w-75" onClick={handleShow}>
         Create Playlist
       </div>

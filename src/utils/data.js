@@ -38,15 +38,22 @@ const texts = {
     },
     projects: {
         mediaset: {
-            title: "Mediaset Projects",
+            title: "Mediaset España Projects",
             description: "The HbbTV department at Mediaset España develops a wide range of interactive applications for Smart TVs on this platform. Projects include MiTele, Canal Digital, LovesTV integration, weather forecast services, and sign language overlays for broadcast content. Additionally, the team has created internal tools and web apps for automating advertising content uploads, manage stream events, video file conversion, and more.",
-            stack: "HbbTV, HTML, CSS, JavaScript, React, Node.js, Express, SQL Server, AWS, Docker, Jenkins, Passport SAML2, Git, Jira",
-            link: "https://linkproyecto1.com"
+            stack: "HTML, CSS, JavaScript, React, Node.js, Express, SQL Server, AWS, Docker, Jenkins, Passport SAML2, Git, Jira",
+            link: "https://www.mediaset.es/comunicacion/digital/20241115/mediaset-hbbtv-awards-contextu-ads-publiespana_18_014021974.html"
         },
-        projectTwo: {
-            title: "Proyecto 2",
-            descripcion: "Descripci\u00F3n del Proyecto 2",
+        worksut: {
+            title: "WORKSUT",
+            description: "Worksut is a web and iOS mobile app designed to connect companies with job seekers, using a more advanced matching algorithm than traditional applications. The development team consisted of young professionals working with the Scrum methodology. I contributed to the frontend development of the web version and received training in iOS app development using Swift. Unfortunately, the project was never launched.",
+            stack: "HTML, CSS, Typescript, React, Styled Components, iOS Swift, Azure",
             link: "https://linkproyecto2.com"
+        },
+        delayCalculator: {
+            title: "Delay Calculator for Audio",
+            description: "Every programmer builds a calculator during their learning journey. I did too, but I designed mine specifically for iOS devices, added functionality tailored to sound engineers, published it on the Apple Store, and created a website to document it. **Delay Calculator for Audio** allows users to select the ambient temperature and calculate time and distance conversions based on the speed of sound in air.",
+            stack: "HTML, CSS, Typescript, React, Styled Components, iOS Swift",
+            link: "https://www.delaycalculator.es/"
         }
     },
     footer: {
